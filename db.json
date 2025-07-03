@@ -1,25 +1,18 @@
 {
-    "puntos_recoleccion": [
-        {
-            "id": 1,
-            "direccion": "Av. Siempre Viva 123",
-            "tipode_punto": "Contenedor",
-            "estado": "Operativo",
-            "observaciones_adicionales": "Requiere limpieza semanal"
-        },
-        {
-            "id": 2,
-            "direccion": "Calle Falsa 456",
-            "tipode_punto": "Punto Verde",
-            "estado": "En reparación",
-            "observaciones_adicionales": "Pendiente de mantenimiento"
-        },
-        {
-            "id": 3,
-            "direccion": "Boulevard Central 789",
-            "tipode_punto": "Contenedor soterrado",
-            "estado": "Operativo",
-            "observaciones_adicionales": "Zona de alto tráfico"
-        }
-    ]
+  "puntos_recoleccion": [
+    {
+      "id": "1",
+      "direccion": "Av. Siempre Viva 123",
+      "tipode_punto": "Contenedor",
+      "estado": "Operativo",
+      "observaciones_adicionales": "Requiere limpieza semanal"
+    },
+    {
+      "id": "2",
+      "direccion": "Calle Falsa 456",
+      "tipode_punto": "Punto Verde",
+      "estado": "En reparación",
+      "observaciones_adicionales": "Pendiente de mantenimiento"
+    }
+  ]
 }

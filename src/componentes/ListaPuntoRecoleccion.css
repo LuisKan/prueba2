@@ -1,0 +1,290 @@
+/* Lista de Puntos de Recolección - Estilos Modernos */
+
+.lista-puntos-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+
+.lista-puntos-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.lista-puntos-title {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.lista-puntos-nav {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.btn-crear-punto {
+  background: linear-gradient(45deg, #28a745, #20c997);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+}
+
+.btn-crear-punto:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+  background: linear-gradient(45deg, #218838, #1ba085);
+}
+
+.puntos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 25px;
+  padding: 20px 0;
+}
+
+.punto-card {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border-left: 5px solid #007bff;
+  position: relative;
+  overflow: hidden;
+}
+
+.punto-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #007bff, #6610f2, #e83e8c);
+}
+
+.punto-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.punto-info {
+  margin-bottom: 20px;
+}
+
+.punto-direccion {
+  color: #2c3e50;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.punto-direccion::before {
+  content: '📍';
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.punto-tipo {
+  color: #34495e;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.punto-tipo::before {
+  content: '🗂️';
+  margin-right: 10px;
+}
+
+.punto-estado {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  padding: 8px 15px;
+  border-radius: 20px;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.estado-operativo,
+.estado-activo {
+  background: linear-gradient(45deg, #28a745, #20c997);
+  color: white;
+}
+
+.estado-dañado,
+.estado-reparacion {
+  background: linear-gradient(45deg, #ffc107, #fd7e14);
+  color: #212529;
+}
+
+.estado-retirado {
+  background: linear-gradient(45deg, #dc3545, #e83e8c);
+  color: white;
+}
+
+.punto-observaciones {
+  color: #6c757d;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  border-left: 4px solid #17a2b8;
+}
+
+.punto-observaciones::before {
+  content: '💬 ';
+  font-weight: bold;
+  color: #17a2b8;
+}
+
+.punto-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.btn-action {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-editar {
+  background: linear-gradient(45deg, #007bff, #6610f2);
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+}
+
+.btn-editar:hover {
+  background: linear-gradient(45deg, #0056b3, #520dc2);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+}
+
+.btn-eliminar {
+  background: linear-gradient(45deg, #dc3545, #e83e8c);
+  color: white;
+  box-shadow: 0 4px 15px rgba(220, 53, 69, 0.3);
+}
+
+.btn-eliminar:hover {
+  background: linear-gradient(45deg, #c82333, #d91a72);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(220, 53, 69, 0.4);
+}
+
+.no-puntos {
+  text-align: center;
+  padding: 60px 20px;
+  color: white;
+}
+
+.no-puntos-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.no-puntos-text {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.no-puntos-subtitle {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .lista-puntos-container {
+    padding: 15px;
+  }
+  
+  .lista-puntos-title {
+    font-size: 2rem;
+  }
+  
+  .puntos-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .punto-card {
+    padding: 20px;
+  }
+  
+  .punto-actions {
+    flex-direction: column;
+  }
+  
+  .btn-action {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .lista-puntos-title {
+    font-size: 1.8rem;
+  }
+  
+  .btn-crear-punto {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+  
+  .punto-direccion {
+    font-size: 1.2rem;
+  }
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.punto-card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.punto-card:nth-child(1) { animation-delay: 0.1s; }
+.punto-card:nth-child(2) { animation-delay: 0.2s; }
+.punto-card:nth-child(3) { animation-delay: 0.3s; }
+.punto-card:nth-child(4) { animation-delay: 0.4s; }
+.punto-card:nth-child(5) { animation-delay: 0.5s; }
+.punto-card:nth-child(6) { animation-delay: 0.6s; }
